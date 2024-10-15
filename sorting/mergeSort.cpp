@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-void merge(int arr[], int begin, int mid, int end)
+void merge(int *arr, int begin, int mid, int end)
 {
     int len1 = mid - begin +1;
     int len2 = end - mid;
@@ -47,8 +47,11 @@ void merge(int arr[], int begin, int mid, int end)
     {
         arr[mainarray++] = Second[index2++];
     }
+
+    delete[] first;
+    delete[] Second;
 }
-void mergeSort(int arr[], int s, int e)
+void mergeSort(int *arr, int s, int e)
 {
     // base case
     if (s >= e)
