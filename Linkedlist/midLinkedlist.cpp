@@ -11,6 +11,7 @@ class Node {
         this->data = val;
         this->next = NULL;
         this->prev = NULL;
+        delete;
         
     }
 };
