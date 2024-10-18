@@ -68,7 +68,15 @@ int main()
 {
     Node* head = NULL;
     insertAtTail(head,9);
+
+    insertAtTail(head,3);
+    insertAtTail(head,2);
+
+    insertAtTail(head,5);
+    insertAtTail(head,34);
+
     insertAtTail(head,0);
+
     printLinkedlist(head);
     Printmidle(head);
     return 0;
