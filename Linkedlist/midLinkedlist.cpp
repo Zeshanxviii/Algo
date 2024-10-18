@@ -5,10 +5,14 @@ class Node {
     public:
     int data;
     Node* next;
+    Node* prev;
     Node(int val)
     {
         this->data = val;
         this->next = NULL;
+        this->prev = NULL;
+        delete;
+        
     }
 };
 
@@ -64,6 +68,7 @@ int main()
 {
     Node* head = NULL;
     insertAtTail(head,9);
+
     insertAtTail(head,3);
     insertAtTail(head,2);
 
