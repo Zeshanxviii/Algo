@@ -5,10 +5,13 @@ class Node {
     public:
     int data;
     Node* next;
+    Node* prev;
     Node(int val)
     {
         this->data = val;
         this->next = NULL;
+        this->prev = NULL;
+        
     }
 };
 
