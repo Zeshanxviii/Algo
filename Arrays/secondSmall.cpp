@@ -12,7 +12,7 @@ int main ()
     int lastDigit = array.size();
     if(array[1]&& array[lastDigit-2])
     {
-       cout<<array[1]<<" "<<array[lastDigit-2]; 
+       cout<<array[1]<<" "<<array[lastDigit-2]<<endl; 
     }
     else
     {
