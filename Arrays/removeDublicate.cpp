@@ -2,6 +2,7 @@
 using namespace std;
 
 // brute force approch
+/*
 int main()
 {
     int arr[5] = {1,1,2,2,3};
@@ -20,5 +21,28 @@ int main()
         index++;
     }
 
+    return 0;
+}
+*/
+
+//optimizes approch
+
+int main()
+{
+    int arr[6] = { 1,1,2,2,3,3 };
+    int i = 0;
+    for(int j=0; j<6; j++)
+    {
+        if(arr[j]!=arr[i])
+        {
+            arr[i+1]= arr[j];
+            i++;
+        }
+    }
+    //print
+    for(int z=0; z<=i; z++)
+    {
+        cout<<arr[z]<<endl;
+    }
     return 0;
 }
