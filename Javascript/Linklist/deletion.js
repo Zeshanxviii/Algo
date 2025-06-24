@@ -30,18 +30,24 @@ class LinkedList {
             add = add.next;
         }
     }
+deletionTargetEle(target) {
+    let pointor = this.head;
+    let prev = null;
 
-    deletionTargetEle(target) {
-        let pointor = this.head
-        while(pointor !== null)
-        {
-            if(pointor.data == target)
-            {
-                
+    while (pointor !== null) {
+        if (pointor.data === target) {
+            if (prev === null) {
+                this.head = pointor.next;
+            } else {
+                prev.next = pointor.next;
             }
-            pointor = pointor.next;
+            return;
         }
+        prev = pointor;
+        pointor = pointor.next;
     }
+}
+
 }
 
 const LinkList = new LinkedList()
@@ -51,5 +57,10 @@ LinkList.insertAtEnd(3)
 LinkList.insertAtEnd(4)
 LinkList.insertAtEnd(5)
 
+
 LinkList.traversal()
 
+
+LinkList.deletionTargetEle(1);
+console.log("Output after deletion Target Element");
+LinkList.traversal()
